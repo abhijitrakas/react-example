@@ -26,4 +26,4 @@ jobs:
     - name: report webpack stats
       uses: packtracker/report@2.2.7
       env:
-        WEBPACK_CONFIG_PATH: ./webpack.config.js
+        WEBPACK_CONFIG_PATH: ./../../webpack.config.js
