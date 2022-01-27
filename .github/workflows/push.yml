@@ -24,6 +24,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: report webpack stats
-    - uses: packtracker/report@2.2.7
+      uses: packtracker/report@2.2.7
       env:
         WEBPACK_CONFIG_PATH: ./webpack.config.js
