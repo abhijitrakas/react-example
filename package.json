@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack",
-    "size": "npm run build && size-limit"
+    "build": "webpack"
   },
   "keywords": [
     "Test",
@@ -22,23 +21,15 @@
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
-    "@size-limit/file": "^7.0.5",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^5.2.7",
     "mini-css-extract-plugin": "^2.5.3",
-    "size-limit": "^7.0.5",
     "style-loader": "^2.0.0",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3"
-  },
-  "size-limit": [
-    {
-      "limit": "56 kB",
-      "path": "build/*"
-    }
-  ]
+  }
 }
