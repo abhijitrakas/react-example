@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const PacktrackerPlugin = require('@packtracker/webpack-plugin')
 
+console.log('process.env.PT_PROJECT_TOKEN', process.env.PT_PROJECT_TOKEN)
 
 module.exports = {
     entry: './src/index.js',
