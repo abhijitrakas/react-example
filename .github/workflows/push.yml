@@ -1,5 +1,7 @@
 on: push
 name: packtracker.io
+env:
+  PT_PROJECT_TOKEN: ${{ secrets.PT_PROJECT_TOKEN }}
 jobs:
   build:
     name: Create build
@@ -22,7 +24,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: report webpack stats
-      uses: packtracker/report@2.2.7
+    - uses: packtracker/report@2.2.7
       env:
-        PT_PROJECT_TOKEN: ${{ secrets.PT_PROJECT_TOKEN }}
         WEBPACK_CONFIG_PATH: ./webpack.config.js
