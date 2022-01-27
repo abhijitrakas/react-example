@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 import App from './components/App';
 import Home from './components/Home';
@@ -13,7 +12,7 @@ import About from './components/About';
 ReactDOM.render(
     <Router>
         <div>
-              <App />
+            <App />
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
         </div>
