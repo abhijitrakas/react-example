@@ -15,9 +15,15 @@ module.exports = {
     },
     plugins: [
         new PacktrackerPlugin({
-          project_token: '1a3d4ba8-2ca6-447f-90b9-2b2a1b97b0ab',
-          upload: true,
-          fail_build: true
+          project_token: process.env.PT_PROJECT_TOKEN,
+          upload: !!process.env.PT_PROJECT_TOKEN,
+          fail_build: true,
+          branch: process.env.PT_BRANCH,
+          author: process.env.PT_AUTHOR,
+          message: process.env.PT_MESSAGE,
+          commit: process.env.PT_COMMIT,
+          committed_at: process.env.PT_COMMITTED_AT,
+          prior_commit: process.env.PT_PRIOR_COMMIT,
         })
     ]
 };
