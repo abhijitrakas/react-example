@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './demo.css';
+
 class About extends React.Component
 {
     render () {

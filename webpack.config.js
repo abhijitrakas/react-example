@@ -8,9 +8,11 @@ module.exports = {
         path: __dirname,
         filename: 'build/bundel.js'
     },
+    mode: 'production',
     module: {
         rules: [
             {'test': /\.js$/, 'use': 'babel-loader'},
+            {'test': /\.css$/, 'use': ["style-loader", "css-loader"]},
         ]
     },
     plugins: [
