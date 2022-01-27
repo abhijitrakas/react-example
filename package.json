@@ -4,7 +4,8 @@
   "description": "Practise built",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack"
   },
   "keywords": [
     "Test",
@@ -13,6 +14,7 @@
   "author": "Abhijit Rakas",
   "license": "MIT",
   "dependencies": {
+    "@packtracker/webpack-plugin": "^2.3.0",
     "babel-polyfill": "^6.23.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
