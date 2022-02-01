@@ -1,13 +1,5 @@
 on: push
 name: packtracker.io
-env:
-  PT_PROJECT_TOKEN: ${{ secrets.PT_PROJECT_TOKEN }}
-  PT_BRANCH: git rev-parse --abbrev-ref HEAD
-  PT_AUTHOR: git log --format="%aE" -n 1 HEAD
-  PT_MESSAGE: git log --format="%B" -n 1 HEAD
-  PT_COMMIT: git rev-parse HEAD
-  PT_COMMITTED_AT: git log --format="%ct" -n 1 HEAD
-  PT_PRIOR_COMMIT: git rev-parse HEAD^
 jobs:
   build:
     name: Create build
@@ -23,13 +15,6 @@ jobs:
 
       - name: Create bundle
         run: npm run build
-  report:
-    name: report webpack stats
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: report webpack stats
-      uses: packtracker/report@2.2.7
-      env:
-        WEBPACK_CONFIG_PATH: ./webpack.config.js
+
+      - name: Check performance budget
+        run: npm run budget

@@ -1,0 +1,12 @@
+{
+	"files": [
+		{
+			"path": "./build/bundle.js",
+			"maxSize": "3 kB"
+		},
+		{
+			"path": "./build/bundle.css",
+			"maxSize": "5 kB"
+		}
+	]
+}
