@@ -2,11 +2,11 @@
 	"files": [
 		{
 			"path": "./build/bundle.js",
-			"maxSize": "3 kB"
+			"maxSize": "300 kB"
 		},
 		{
 			"path": "./build/bundle.css",
-			"maxSize": "5 kB"
+			"maxSize": "50 kB"
 		}
 	]
 }
