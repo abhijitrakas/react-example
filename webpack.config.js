@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const PacktrackerPlugin = require('@packtracker/webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -8,9 +9,11 @@ module.exports = {
         path: __dirname,
         filename: 'build/bundel.js'
     },
+    mode: 'production',
     module: {
         rules: [
             {'test': /\.js$/, 'use': 'babel-loader'},
+            {'test': /\.css$/, 'use': [MiniCssExtractPlugin.loader, "css-loader"]},
         ]
     },
     plugins: [
@@ -24,6 +27,9 @@ module.exports = {
           commit: process.env.PT_COMMIT,
           committed_at: process.env.PT_COMMITTED_AT,
           prior_commit: process.env.PT_PRIOR_COMMIT,
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'build/bundel.css'
         })
     ]
 };
